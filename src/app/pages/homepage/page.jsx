@@ -1,3 +1,5 @@
+import ThemeToggle from "@/components/themeToggle/page";
+
 
 
 const HomePage = () => {
@@ -39,6 +41,8 @@ const HomePage = () => {
       <li><a>Item 3</a></li>
     </ul>
   </div>
+
+  <ThemeToggle></ThemeToggle>
   
 </div>
     );

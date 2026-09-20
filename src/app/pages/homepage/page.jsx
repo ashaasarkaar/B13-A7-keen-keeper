@@ -1,9 +1,18 @@
 import BannerSection from "@/components/banner/page";
+import FriendsSection from "@/components/friends/page";
+
 
 const HomePage = () => {
 
     return (
-      <BannerSection></BannerSection>
+      <div className="bg-base-200">
+        <BannerSection></BannerSection>
+        <FriendsSection></FriendsSection>
+      </div>
+        
+        
+    
+      
 
     );
 };

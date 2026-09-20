@@ -111,9 +111,11 @@ const NavBar = () => {
 
         </div>
 
-        <ThemeToggle></ThemeToggle>
-
+        
+              <ThemeToggle></ThemeToggle>
       </div>
+
+      
     </div>
   );
 };

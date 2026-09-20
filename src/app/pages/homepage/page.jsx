@@ -1,8 +1,9 @@
+import BannerSection from "@/components/banner/page";
 
 const HomePage = () => {
 
     return (
-      <h1>homepage</h1>
+      <BannerSection></BannerSection>
 
     );
 };

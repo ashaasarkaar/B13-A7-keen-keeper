@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
-import BannerSection from "@/components/banner/page";
+
 
 
 
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
 
       <body className="min-h-full flex flex-col">
         <NavBar></NavBar>
-        <BannerSection></BannerSection>
+       
          <main>
          
           

@@ -11,7 +11,7 @@ const FriendsSection = async() => {
             
                 <h1 className='font-bold text-xl mb-5'>Your Friends</h1>
 
-                <div className='grid grid-cols-4 gap-10'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
                     {
                         friends.map(friend => <Friend key={friend.id} friend={friend}></Friend>)
                     }

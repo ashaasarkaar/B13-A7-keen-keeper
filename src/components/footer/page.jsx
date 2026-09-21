@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
 
             <div className='divider'></div>
-            <div className='text-white flex justify-between items-center text-sm'>
+            <div className='text-white flex flex-col md:flex-row justify-between items-center text-sm'>
                 <div>
                     <p>&copy;2026 KeenKeeper. All rights reserved.</p>
                 </div>

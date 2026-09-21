@@ -13,13 +13,13 @@ const FriendDetailPage = async({params}) => {
     (friend) => friend.id == friendId
   );
   console.log(friendDetailInfo)
-  const {name,status,tags,picture,bio,email} = friendDetailInfo;
+  const {name,status,tags,picture,bio,email,days_since_contact,goal,next_due_date} = friendDetailInfo;
 
     return (
         <div className='grid grid-cols-[1fr_2fr] gap-5 w-9/12 mx-auto mt-10'>
             {/* left side START */}
             <div className='space-y-5'>
-                 <div  className='text-center shadow-xl bg-white rounded-2xl py-8 space-y-3 px-20'>
+                 <div  className='text-center shadow-xl bg-base-100 text-base-content rounded-2xl py-12 space-y-3 px-20'>
                         <Image 
                         src={picture}
                         alt={name}
@@ -39,7 +39,7 @@ const FriendDetailPage = async({params}) => {
 
                          <div className='space-x-3'>
                             {
-                                tags.map((tag, index) => <button className='btn btn-sm rounded-full bg-[#CBFADB]' key={index}>{tag}</button>)
+                                tags.map((tag, index) => <button className='btn btn-sm rounded-full bg-[#CBFADB] dark:text-black' key={index}>{tag}</button>)
                             }
                         </div>
                         <p className='text-[#64748B] font-medium'>{bio}</p>
@@ -60,17 +60,17 @@ const FriendDetailPage = async({params}) => {
                 <div className='grid grid-cols-3 gap-4 py-8'>
 
                     <div className='bg-base-100 text-base-content shadow-lg p-10 text-center rounded-xl'>
-                        <span className='font-bold text-2xl text-[#244D3F]'>62</span>
+                        <span className='font-bold text-2xl text-[#244D3F]'>{days_since_contact}</span>
                         <p className='text-[#64748B]'>Days Since Contact</p>
                     </div>
 
                     <div className='bg-base-100 text-base-content shadow-lg p-10 text-center rounded-xl'>
-                        <span className='font-bold text-2xl text-[#244D3F]'>30</span>
+                        <span className='font-bold text-2xl text-[#244D3F]'>{goal}</span>
                         <p className='text-[#64748B]'>Goal (Days)</p>
                     </div>
 
                     <div className='bg-base-100 text-base-content shadow-lg p-10 text-center rounded-xl'>
-                        <span className='font-bold text-2xl text-[#244D3F]'>SEP 21, 2026</span>
+                        <span className='font-bold text-2xl text-[#244D3F]'>{next_due_date}</span>
                         <p className='text-[#64748B]'>Next Due</p>
                     </div>
 
@@ -81,7 +81,7 @@ const FriendDetailPage = async({params}) => {
                 <div className='bg-base-100 text-base-content shadow-lg p-10 text-center rounded-xl flex justify-between items-center'>
                     <div className='space-y-4'>
                         <h2 className='text-[#244D3F] font-bold'>Relationship Goal</h2>
-                        <h3 className='text-[#64748B]'>Connect every <span className='text-black font-bold'>30 days</span></h3>
+                        <h3 className='text-[#64748B]'>Connect every <span className='text-black font-bold'>{goal} days</span></h3>
                     </div>
                     <button className='btn'>Edit</button>
                 </div>

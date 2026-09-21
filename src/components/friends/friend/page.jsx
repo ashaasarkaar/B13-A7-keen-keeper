@@ -13,7 +13,7 @@ const Friend = ({friend}) => {
      <Link href={`/pages/friendDetail/${friend.id}`}>
 
         {/* Card Body START */}
-        <div  className='text-center shadow-2xl bg-white rounded-2xl py-10 space-y-3'>
+        <div  className='text-center shadow-2xl bg-base-100 rounded-2xl py-10 space-y-3'>
         <Image 
         src={picture}
         alt={name}
@@ -26,7 +26,7 @@ const Friend = ({friend}) => {
         <p className='text-[#64748B]'>{days_since_contact}d ago</p>
         <div className='space-x-3'>
             {
-                tags.map((tag, index) => <button className='btn btn-sm rounded-full bg-[#CBFADB]' key={index}>{tag}</button>)
+                tags.map((tag, index) => <button className='btn btn-sm rounded-full bg-[#CBFADB] dark:text-black' key={index}>{tag}</button>)
             }
         </div>
 

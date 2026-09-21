@@ -26,8 +26,8 @@ const NavBar = () => {
              <Link
               href="/pages/homepage"
               className={
-                pathname === "/pages/homepage"
-                  ? "btn bg-[#244D3F] text-white"
+                pathname === '/'|| pathname === "/pages/homepage"
+                  ? "btn bg-[#244D3F] text-white" 
                   : "btn text-[#64748B]"
               }
             >

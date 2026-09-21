@@ -1,12 +1,7 @@
-import Image from "next/image";
-import HomePage from "./pages/homepage/page";
-import NavBar from "@/components/navbar/page";
+import { redirect } from "next/navigation";
 
 
 export default function Home() {
-  return (
-    <div>
-       
-    </div>
-  );
+ redirect('/pages/homepage')
+  
 }

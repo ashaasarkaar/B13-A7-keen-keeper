@@ -2,6 +2,7 @@ import BannerSection from "@/components/banner/page";
 import FriendsSection from "@/components/friends/page";
 
 
+
 const HomePage = () => {
 
     return (

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Friend = ({friend}) => {
@@ -9,8 +10,10 @@ const Friend = ({friend}) => {
        
        <div>
 
+     <Link href={`/pages/friendDetail/${friend.id}`}>
+
         {/* Card Body START */}
-        <div className='text-center shadow-2xl bg-white rounded-2xl py-10 space-y-3'>
+        <div  className='text-center shadow-2xl bg-white rounded-2xl py-10 space-y-3'>
         <Image 
         src={picture}
         alt={name}
@@ -36,6 +39,7 @@ const Friend = ({friend}) => {
 
        </div>
        {/* Card Body END */}
+     </Link>
 
        </div>
     );

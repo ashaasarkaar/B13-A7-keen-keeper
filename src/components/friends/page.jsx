@@ -6,6 +6,7 @@ const FriendsSection = async() => {
     const res = await fetch("http://localhost:3000/friends.json");
     const friends = await res.json()
     console.log(friends)
+   
     return (
         <div className='text-base-content w-9/12 mx-auto'> 
             

@@ -1,8 +1,12 @@
+
 import React from 'react';
 import Image from 'next/image';
 import { RiDeleteBin5Line, RiNotificationSnoozeFill } from 'react-icons/ri';
-import { FiArchive, FiPhoneCall } from 'react-icons/fi';
+import { FiArchive } from 'react-icons/fi';
 import { MdOutlineTextsms, MdOutlineVideocam } from 'react-icons/md';
+import CallBtn from '@/components/callBtn/page';
+import TextBtn from '@/components/textBtn/page';
+import VideoBtn from '@/components/videoBtn/page';
 
 const FriendDetailPage = async({params}) => {
     const {friendId} = await params;
@@ -15,8 +19,10 @@ const FriendDetailPage = async({params}) => {
   console.log(friendDetailInfo)
   const {name,status,tags,picture,bio,email,days_since_contact,goal,next_due_date} = friendDetailInfo;
 
+
+
     return (
-        <div className='grid grid-cols-[1fr_2fr] gap-5 w-9/12 mx-auto mt-10'>
+        <div className='grid grid-rows-[1fr_2fr] lg:grid-cols-[1fr_2fr]   gap-5 w-9/12 mx-auto mt-10'>
             {/* left side START */}
             <div className='space-y-5'>
                  <div  className='text-center shadow-xl bg-base-100 text-base-content rounded-2xl py-12 space-y-3 px-20'>
@@ -89,23 +95,17 @@ const FriendDetailPage = async({params}) => {
 
                 {/* 3rd Row START */}
                 <div className='bg-base-100 text-base-content shadow-lg p-10  rounded-xl space-y-3'>
+
                     <h2 className='font-bold text-xl text-black '>Quick Check-In</h2>
+
                     <div className='grid grid-cols-3 gap-4 text-center'>
-                        <div className='bg-base-200 shadow-xl rounded-2xl p-10 space-y-2'>
-                            <FiPhoneCall size={30} className='mx-auto' />
-                            <p>Call</p>
 
-                        </div>
-                         <div className='bg-base-200 shadow-xl rounded-2xl p-10 space-y-2'>
-                            <MdOutlineTextsms size={30} className='mx-auto' />
-                            <p>Text</p>
+                       <CallBtn friendDetailInfo={friendDetailInfo}></CallBtn>
 
-                        </div>
-                        <div className='bg-base-200 shadow-xl rounded-2xl p-10 space-y-2'>
-                            <MdOutlineVideocam size={30} className='mx-auto' />
-                            <p>Video</p>
+                       <TextBtn friendDetailInfo={friendDetailInfo}></TextBtn>
 
-                        </div>
+                        <VideoBtn friendDetailInfo={friendDetailInfo} ></VideoBtn>
+                        
                     </div>
 
                 </div>

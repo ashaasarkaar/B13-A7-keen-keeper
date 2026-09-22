@@ -2,11 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { RiDeleteBin5Line, RiNotificationSnoozeFill } from 'react-icons/ri';
+import ContactBtn from '@/components/contactBtn/page';
 import { FiArchive } from 'react-icons/fi';
-import { MdOutlineTextsms, MdOutlineVideocam } from 'react-icons/md';
-import CallBtn from '@/components/callBtn/page';
-import TextBtn from '@/components/textBtn/page';
-import VideoBtn from '@/components/videoBtn/page';
 
 const FriendDetailPage = async({params}) => {
     const {friendId} = await params;
@@ -100,11 +97,12 @@ const FriendDetailPage = async({params}) => {
 
                     <div className='grid grid-cols-3 gap-4 text-center'>
 
-                       <CallBtn friendDetailInfo={friendDetailInfo}></CallBtn>
+                       <ContactBtn type='call' friendDetailInfo={friendDetailInfo}></ContactBtn>
 
-                       <TextBtn friendDetailInfo={friendDetailInfo}></TextBtn>
+                       <ContactBtn type='text' friendDetailInfo={friendDetailInfo}></ContactBtn>
 
-                        <VideoBtn friendDetailInfo={friendDetailInfo} ></VideoBtn>
+                       <ContactBtn type='video' friendDetailInfo={friendDetailInfo}></ContactBtn>
+                       
                         
                     </div>
 

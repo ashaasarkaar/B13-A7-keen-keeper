@@ -6,6 +6,9 @@ import Footer from "@/components/footer/page";
 import { ToastContainer } from "react-toastify";
 
 
+import { FriendProvider } from "@/components/context/FriendContext";
+
+
 
 
 
@@ -35,7 +38,8 @@ export default function RootLayout({ children }) {
     
 
       <body className="min-h-full flex flex-col">
-        <NavBar></NavBar>
+    <FriendProvider>
+          <NavBar></NavBar>
        
          <main>
          
@@ -46,6 +50,7 @@ export default function RootLayout({ children }) {
            
          </main>
           <Footer></Footer>
+    </FriendProvider>
 
 
        

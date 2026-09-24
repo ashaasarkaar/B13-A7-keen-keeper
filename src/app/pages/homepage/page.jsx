@@ -6,7 +6,7 @@ import FriendsSection from "@/components/friends/page";
 const HomePage = () => {
 
     return (
-      <div className="bg-base-200">
+      <div className="bg-base-200 pb-10">
         <BannerSection></BannerSection>
         <FriendsSection></FriendsSection>
       </div>

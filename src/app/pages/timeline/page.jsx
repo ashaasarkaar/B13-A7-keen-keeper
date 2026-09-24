@@ -11,10 +11,18 @@ import { MdOutlineTextsms, MdOutlineVideocam } from "react-icons/md";
 
 const TimeLinePage = () => {
 
+     const { friends } = useFriend();
+
     const [filter, setFilter] = useState("");
 
+    const filteredFriends = 
+    filter === '' || filter === 'all'
+    ? friends 
+    : friends.filter(((friend) => friend.contactType === filter));
 
-    const { friends } = useFriend();
+
+
+   
 
     const currentTime = new Date().toLocaleTimeString();
 
@@ -61,7 +69,7 @@ const TimeLinePage = () => {
 
             <div className="mt-5 space-y-5">
 
-                {friends.map((friend,index) => (
+                {filteredFriends.map((friend,index) => (
 
                     <div
                         key={index}

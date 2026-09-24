@@ -15,6 +15,8 @@ const TimeLinePage = () => {
 
     const [filter, setFilter] = useState("");
 
+
+
     const filteredFriends = 
     filter === '' || filter === 'all'
     ? friends 
@@ -24,7 +26,6 @@ const TimeLinePage = () => {
 
    
 
-    const currentTime = new Date().toLocaleTimeString();
 
 
     console.log("All Selected Friends:", friends);
@@ -104,7 +105,7 @@ const TimeLinePage = () => {
                                <span className="text-[#244D3F] text-2xl font-bold"> {friend.contactType}</span> with  {friend.name}
                             </h2>
 
-                            <p className="text-[#64748B] text-xl">{currentTime}</p>
+                            <p className="text-[#64748B] text-xl">{friend.currentTime}</p>
                         </div>
                         {/* Right Side Text Part END */}
 

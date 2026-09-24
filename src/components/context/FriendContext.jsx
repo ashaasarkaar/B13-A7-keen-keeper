@@ -12,7 +12,8 @@ export const FriendProvider = ({ children }) => {
 
         const contactData = {
             ...friend,
-            contactType: type
+            contactType: type,
+            currentTime: new Date().toLocaleTimeString()
         }
 
         setFriends((prev) => {

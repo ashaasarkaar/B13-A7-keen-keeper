@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import { useFriend } from "@/components/context/FriendContext";
 
 const ContactBtn = ({ friendDetailInfo, type }) => {
+    
     const { name } = friendDetailInfo;
 
     const { addFriend } = useFriend();

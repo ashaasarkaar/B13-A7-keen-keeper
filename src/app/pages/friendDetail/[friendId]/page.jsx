@@ -109,12 +109,6 @@ const FriendDetailPage = async({params}) => {
                 </div>
                 {/* 3rd Row END */}
 
-
-
-
-
-
-
              </div>
              {/* right side END */}
             

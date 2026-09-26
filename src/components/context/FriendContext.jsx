@@ -32,6 +32,7 @@ export const FriendProvider = ({ children }) => {
     };
 
     return (
+
         <FriendContext.Provider value={{ friends, addFriend }}>
             {children}
         </FriendContext.Provider>

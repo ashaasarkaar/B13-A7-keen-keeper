@@ -22,12 +22,6 @@ const TimeLinePage = () => {
     ? friends 
     : friends.filter(((friend) => friend.contactType === filter));
 
-
-
-   
-
-
-
     console.log("All Selected Friends:", friends);
 
 

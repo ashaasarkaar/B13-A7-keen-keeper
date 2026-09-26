@@ -15,19 +15,7 @@ const StatsPage = ({isAnimationActive = true} ) => {
         Video: "#166534",
     };
 
-    const renderShape = (props) => {
-
-    const { name, ...rest } = props;
-
-    return (
-        <Sector
-            {...rest}
-            fill={colors[name]}
-        />
-    );
-};
-
-    const chartData = [
+        const chartData = [
         {
             name: "Call",
             value: friends.filter(
@@ -48,6 +36,18 @@ const StatsPage = ({isAnimationActive = true} ) => {
         },
     ];
 
+
+    const renderShape = (props) => {
+
+    const { name, ...rest } = props;
+
+    return (
+        <Sector
+            {...rest}
+            fill={colors[name]}
+        />
+    );
+};
 
         const renderLegend = () => {
             

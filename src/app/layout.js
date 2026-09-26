@@ -1,12 +1,7 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/navbar/page";
-import Footer from "@/components/footer/page";
 import { ToastContainer } from "react-toastify";
-
-
-import { FriendProvider } from "@/components/context/FriendContext";
 
 
 
@@ -38,20 +33,17 @@ export default function RootLayout({ children }) {
     
 
       <body className="min-h-full flex flex-col">
-    <FriendProvider>
-          <NavBar></NavBar>
+   
        
          <main>
          
           
             {children}
 
-            <ToastContainer />
+          <ToastContainer />
            
          </main>
-          <Footer></Footer>
-    </FriendProvider>
-
+   
 
        
         </body>

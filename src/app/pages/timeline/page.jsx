@@ -73,7 +73,7 @@ const TimeLinePage = () => {
 
 
 
-              <div className="grid grid-rows-1 md:grid-cols-3 space-y-2 md:space-x-0">
+              <div className="flex flex-col  md:flex-row items-center space-y-2 md:space-x-2">
 
                   {/* For Filtering Code START */}
                 <select

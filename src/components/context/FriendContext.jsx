@@ -13,7 +13,8 @@ export const FriendProvider = ({ children }) => {
         const contactData = {
             ...friend,
             contactType: type,
-            currentTime: new Date().toLocaleTimeString()
+            currentTime: new Date().toLocaleTimeString(),
+            createdAt: new Date()
         }
 
         setFriends((prev) => {
